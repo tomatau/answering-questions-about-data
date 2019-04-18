@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Answering questions about data</title>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Times tables</h1>
+    <main class="main">
+      <h2>Ones</h2>
+      <ol class='ones'>
+      </ol>
+      <h2>Twos</h2>
+      <ol class='twos'>
+      </ol>
+      <h2>Threes</h2>
+      <ol class='threes'>
+      </ol>
+      <h2>Fours</h2>
+      <ol class='fours'>
+      </ol>
+      <h2>Fives</h2>
+      <ol class='fives'>
+      </ol>
+    </main>
+  </div>
+
+  <script>
+    /* given this function */
+    function multiplyItemsBy(array, multiplier) {
+      return array.map(function (item) {
+        return item * multiplier
+      })
+    }
+
+    /* given this function */
+    function getStringOfElements(array, element) {
+      const arrayOfElements = array.map(function (item) {
+        return `<${element}>${item}</${element}>`
+      })
+
+      return arrayOfElements.join('')
+    }
+
+    /* given the first two variables */
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const twos = multiplyItemsBy(numbers, 2);
+    /* write the assignment for these three variables */
+    const threes = multiplyItemsBy(numbers, 3);
+    const fours = multiplyItemsBy(numbers, 4);
+    const fives = multiplyItemsBy(numbers, 5);
+
+    /* given the `.ones` as an example */
+    document.querySelector('.ones').innerHTML = getStringOfElements(numbers, 'li');
+    /* write the assignment for the next 4 lines */
+    document.querySelector('.twos').innerHTML = getStringOfElements(twos, 'li');
+    document.querySelector('.threes').innerHTML = getStringOfElements(threes, 'li');
+    document.querySelector('.fours').innerHTML = getStringOfElements(fours, 'li');
+    document.querySelector('.fives').innerHTML = getStringOfElements(fives, 'li');
+  </script>
+</body>
+
+</html>

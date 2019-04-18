@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Answering questions about data</title>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Whas is this?</h1>
+    <main class="main">
+
+    </main>
+  </div>
+
+  <script>
+    /* predict the output of this code */
+
+    function getStringOfElements(array, element) {
+      const arrayOfElements = array.map(function (item) {
+        return `<${element}>${item}</${element}>`
+      })
+
+      return arrayOfElements.join('')
+    }
+
+    const lis = ['one', 'two', 'three', 'four']
+
+    const sections = ['<ul></ul>', '<ol></ol>']
+
+    document.querySelector('.main').innerHTML = getStringOfElements(sections, 'section');
+
+    document.querySelector('ul').innerHTML = getStringOfElements(lis, 'li');
+
+    document.querySelector('ol').innerHTML = getStringOfElements(lis, 'li');
+  </script>
+</body>
+
+</html>

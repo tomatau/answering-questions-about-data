@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Answering questions about data</title>
+</head>
+
+<body>
+  <div class="content">
+    <h1>Shopping list</h1>
+    <main class="main">
+      <h2>Your products</h2>
+      <ul class='products'></ul>
+      <h3>Total price: <span class="total-price"></span></h3>
+    </main>
+  </div>
+
+  <script>
+    /* given this function */
+    function getShoppingListTotalPrice(shoppingListArray) {
+      let total = 0
+
+      shoppingListArray.forEach(function (item) {
+        total += item.price
+      })
+
+      return total
+    }
+
+    /* given this array of products */
+    const products = [
+      { name: 'Product 1', price: 123.00 },
+      { name: 'Product 2', price: 123.00 },
+      { name: 'Product 3', price: 123.00 },
+      { name: 'Product 4', price: 123.00 },
+      { name: 'Product 5', price: 123.00 },
+    ]
+
+    /* write the code below to display the products */
+    const liArray = products.map(function(product) {
+      return `<li>
+        ${product.name} - $${product.price} USD
+      </li>`
+    })
+
+    document.querySelector('.products').innerHTML = liArray.join('');
+
+    /* write the code below to display the total price */
+    document.querySelector('.total-price').innerHTML = '$' + getShoppingListTotalPrice(products) + ' USD';
+  </script>
+</body>
+
+</html>
