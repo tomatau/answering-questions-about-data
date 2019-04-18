@@ -50,15 +50,11 @@
     { name: 'Product 5', price: 123.00 },
   ]
 
-  const liArray = products.map(function(product) {
-    return `<li>
-      ${product.name} - $${product.price} USD
-    </li>`
-  })
+  const liArray = products.map(/* your code here */)
 
   document.querySelector('.products').innerHTML = liArray.join('');
 
-  document.querySelector('.total-price').innerHTML = getShoppingListTotalPrice(products);
+  /* your code here */ = getShoppingListTotalPrice(products);
 </script>
 </body>
 

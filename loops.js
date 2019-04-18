@@ -26,7 +26,7 @@ function getTriangularNumber(layers) {
   let total = 0
 
   for (let i = 1; i <= layers; i++) {
-    total += i
+  /* your code here */
   }
 
   return total
@@ -54,9 +54,7 @@ function getTriangularNumber(layers) {
 function getCountdown(from) {
   let str = ''
 
-  for (let i = from; i > 0; i--) {
-    str = str + i + '... ';
-  }
+  /* your code here */
 
   str = str + 'BOOM!';
 
@@ -83,17 +81,7 @@ function getCountdown(from) {
  * @returns {number} `total`
  */
 function getFizzBuzzTotal(n) {
-  let total = 0
 
-  for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0)
-      total += i
-
-    else if (i % 5 === 0)
-      total += i
-  }
-
-  return total
 }
 
 /**
@@ -127,21 +115,7 @@ function getFizzBuzzTotal(n) {
  * @returns {number} `total` the sum of multiples of inner arrays
  */
 function getMultipliedSums(nestedArray) {
-  let total = 0
 
-  for (let i = 0; i < nestedArray.length; i++) {
-    let innerTotal = 1
-
-    const innerArray = nestedArray[i]
-
-    for (let j = 0; j < innerArray.length; j++) {
-      innerTotal *= innerArray[j]
-    }
-
-    total += innerTotal
-  }
-
-  return total
 }
 
 /*******************
@@ -169,7 +143,7 @@ function getArrayTotal(arr) {
   let total = 0
 
   for (const item of arr) {
-    total += item
+  /* your code here */
   }
 
   return total
@@ -202,13 +176,7 @@ function getArrayTotal(arr) {
  * @returns {number} total of items in array
  */
 function getShoppingListTotalPrice(arr) {
-  let total = 0
 
-  for (const item of arr) {
-    total += item.price
-  }
-
-  return total
 }
 
 /**
@@ -240,13 +208,7 @@ function getShoppingListTotalPrice(arr) {
  * @returns {string} items wrapped in divs
  */
 function getStringOfDivs(arr) {
-  let str = ''
 
-  for (const item of arr) {
-    str += `<div>${item}</div>`
-  }
-
-  return str
 }
 
 /**
@@ -268,12 +230,7 @@ function getStringOfDivs(arr) {
  * @returns {boolean} true if the array contains the thing to find, false otherwise
  */
 function arrayIncludes(array, thingToFind) {
-  for (const item of array) {
-    if (item === thingToFind)
-      return true
-  }
 
-  return false
 }
 
 /*******************
@@ -295,13 +252,7 @@ function arrayIncludes(array, thingToFind) {
  * @returns {string} all of the object's keys concatenated into a string
  */
 function concatKeys(object) {
-  let str = ''
 
-  for (const key in object) {
-    str += key;
-  }
-
-  return str
 }
 
 /**
@@ -332,13 +283,7 @@ function concatKeys(object) {
  * @returns {number} total of sum of object's values
  */
 function getObjectTotal(object) {
-  let total = 0
 
-  for (const key in object) {
-    total += object[key];
-  }
-
-  return total
 }
 
 /**
@@ -360,10 +305,7 @@ function getObjectTotal(object) {
  * @returns {string or undefined} key for the found value or undefined
  */
 function findKeyByValue(object, valueToFind) {
-  for (const key in object) {
-    if (object[key] === valueToFind)
-      return key
-  }
+
 }
 
 /**
@@ -386,12 +328,7 @@ function findKeyByValue(object, valueToFind) {
  * @returns {boolean} true if the object contains the thing, false otherwise
  */
 function objectIncludes(object, thingToFind) {
-  for (const key in object) {
-    if (object[key] === thingToFind)
-      return true
-  }
 
-  return false
 }
 
 /*******************
@@ -418,9 +355,7 @@ function findMatchingIndex(array, valueToFind) {
   let index = 0
 
   while (index < array.length) {
-    if (array[index] === valueToFind) {
-      return index
-    }
+  /* your code here */
 
     index++
   }
@@ -445,14 +380,9 @@ function findMatchingIndex(array, valueToFind) {
  * @returns {number} the mean average of array numbers or `0`
  */
 function getMeanAverage(array) {
-  let index = 0
   let total = 0
 
-  while (index < array.length) {
-    total += array[index]
-
-    index++
-  }
+/* your code here */
 
   return total / array.length || 0
 }
@@ -473,17 +403,7 @@ function getMeanAverage(array) {
  * @returns {boolean} true if all of the items in the array are the same as the `valueToCheck`, false otherwise.
  */
 function all(array, valueToCheck) {
-  let index = 0
 
-  while (index < array.length) {
-    if (array[index] !== valueToCheck) {
-      return false
-    }
-
-    index++
-  }
-
-  return true
 }
 
 /**
@@ -515,17 +435,5 @@ function all(array, valueToCheck) {
  * @returns {number} count of items in array that have the same value in a sequence starting at the beginning of the array.
  */
 function getCountOfSequence(array) {
-  let totalCount = 0
-  let index = 0
 
-  while (index < array.length) {
-    if (index > 0
-      && array[index] !== array[index-1]) {
-      break
-    }
-    totalCount += 1
-    index++
-  }
-
-  return totalCount
 }
