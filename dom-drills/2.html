@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Answering questions about data</title>
+</head>
+
+<body>
+  <pre class="instructions">
+    This drill tests your ability to combine utility functions to create content and render it onto the page.
+
+    Use the <code>multiplyItemsBy</code> function to create three variables: <code>threes</code>, <code>fours</code> and <code>fives</code>.
+
+    Next, use DOM selectors and the <code>getStringOfElements</code> to render each of the variables you created into their appropriate <code>ol</code> element.
+
+    For example, the <code>threes</code> variable can be used to render into the <code>ol.threes</code> element.
+  </pre>
+
+  <div class="content">
+    <h1>Times tables</h1>
+    <main class="main">
+      <h2>Ones</h2>
+      <ol class='ones'>
+      </ol>
+      <h2>Twos</h2>
+      <ol class='twos'>
+      </ol>
+      <h2>Threes</h2>
+      <ol class='threes'>
+      </ol>
+      <h2>Fours</h2>
+      <ol class='fours'>
+      </ol>
+      <h2>Fives</h2>
+      <ol class='fives'>
+      </ol>
+    </main>
+  </div>
+
+<script>
+  function multiplyItemsBy(array, multiplier) {
+    return array.map(function (item) {
+      return item * multiplier
+    })
+  }
+
+  function getStringOfElements(array, element) {
+    const arrayOfElements = array.map(function (item) {
+      return `<${element}>${item}</${element}>`
+    })
+
+    return arrayOfElements.join('')
+  }
+
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const twos = multiplyItemsBy(numbers, 2);
+  const threes = multiplyItemsBy(numbers, 3);
+  const fours = multiplyItemsBy(numbers, 4);
+  const fives = multiplyItemsBy(numbers, 5);
+
+  document.querySelector('.ones').innerHTML = getStringOfElements(numbers, 'li');
+  document.querySelector('.twos').innerHTML = getStringOfElements(twos, 'li');
+  document.querySelector('.threes').innerHTML = getStringOfElements(threes, 'li');
+  document.querySelector('.fours').innerHTML = getStringOfElements(fours, 'li');
+  document.querySelector('.fives').innerHTML = getStringOfElements(fives, 'li');
+</script>
+</body>
+
+</html>
