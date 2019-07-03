@@ -1,5 +1,5 @@
 describe(`For loops`, () => {
-  describe(`getTriangularNumber(layers)`, () => {
+  describe(`getTriangularNumber(layers: Number): Number`, () => {
     it(`returns 0 by default`, () => {
       expect(getTriangularNumber()).to.eql(0)
     })
@@ -17,7 +17,7 @@ describe(`For loops`, () => {
     })
   })
 
-  describe(`getCountdown(from)`, () => {
+  describe(`getCountdown(from: Number): String`, () => {
     it(`returns just 'BOOM!' by default`, () => {
       expect(getCountdown()).to.eql('BOOM!')
     })
@@ -37,7 +37,7 @@ describe(`For loops`, () => {
     })
   })
 
-  describe(`getFizzBuzzTotal(n)`, () => {
+  describe(`getFizzBuzzTotal(n: Number): Number`, () => {
     it(`returns 0 by default`, () => {
       expect(getFizzBuzzTotal()).to.eql(0)
     })
@@ -65,7 +65,7 @@ describe(`For loops`, () => {
     })
   })
 
-  describe(`getMultipliedSums(nestedArray)`, () => {
+  describe(`getMultipliedSums(nestedArray: Array<Array<Number>>): Number`, () => {
     it(`returns 1 by default`, () => {
       expect(getMultipliedSums([])).to.eql(0)
     })
@@ -99,7 +99,7 @@ describe(`For loops`, () => {
 })
 
 describe(`For-of loops`, () => {
-  describe(`getArrayTotal(arr)`, () => {
+  describe(`getArrayTotal(arr: Array<Number>): Number`, () => {
     it(`returns 0 by default with an empty array`, () => {
       expect(getArrayTotal([])).to.eql(0)
     })
@@ -124,7 +124,7 @@ describe(`For-of loops`, () => {
     })
   })
 
-  describe(`getShoppingListTotalPrice(arr)`, () => {
+  describe(`getShoppingListTotalPrice(arr: Array<Object>): Number`, () => {
     it(`returns 0 by default with an empty array`, () => {
       expect(getShoppingListTotalPrice([])).to.eql(0)
     })
@@ -144,7 +144,7 @@ describe(`For-of loops`, () => {
     })
   })
 
-  describe(`getStringOfDivs(arr)`, () => {
+  describe(`getStringOfDivs(arr: Array<String>): String`, () => {
     it(`returns '' by default with an empty array`, () => {
       expect(getStringOfDivs([])).to.eql('')
     })
@@ -165,7 +165,7 @@ describe(`For-of loops`, () => {
     })
   })
 
-  describe(`arrayIncludes(array, thingToFind)`, () => {
+  describe(`arrayIncludes(array: Array<Any>, thingToFind: Any): Boolean`, () => {
     it(`returns false by default`, () => {
       expect(arrayIncludes([])).to.eql(false)
     })
@@ -183,7 +183,7 @@ describe(`For-of loops`, () => {
 })
 
 describe(`For-in loops`, () => {
-  describe(`concatKeys(object)`, () => {
+  describe(`concatKeys(object: Object): String`, () => {
     it(`returns an empty string by default`, () => {
       expect(concatKeys()).to.eql('')
     })
@@ -207,7 +207,7 @@ describe(`For-in loops`, () => {
     })
   })
 
-  describe(`getObjectTotal(object)`, () => {
+  describe(`getObjectTotal(object: Object): Number`, () => {
     it(`returns 0 by default with an empty array`, () => {
       expect(getObjectTotal({})).to.eql(0)
     })
@@ -270,7 +270,7 @@ describe(`For-in loops`, () => {
     })
   })
 
-  describe(`findKeyByValue(object, valueToFind)`, () => {
+  describe(`findKeyByValue(object: Object, valueToFind: Any): String`, () => {
     it(`returns undefined by default with an empty object`, () => {
       expect(findKeyByValue({})).to.eql(undefined)
       expect(findKeyByValue({}, 'a')).to.eql(undefined)
@@ -292,7 +292,7 @@ describe(`For-in loops`, () => {
     })
   })
 
-  describe(`objectIncludes(object, valueToFind)`, () => {
+  describe(`objectIncludes(object: Object, valueToFind: Any): Boolean`, () => {
     it(`returns false by default with an empty object`, () => {
       expect(objectIncludes({})).to.eql(false)
       expect(objectIncludes({}, 'a')).to.eql(false)
@@ -316,7 +316,7 @@ describe(`For-in loops`, () => {
 })
 
 describe(`While loops`, () => {
-  describe(`findMatchingIndex(array, valueToFind)`, () => {
+  describe(`findMatchingIndex(array: Array<Any>, valueToFind: Any): Number`, () => {
     it(`returns -1 by default`, () => {
       expect(findMatchingIndex([])).to.eql(-1)
     })
@@ -334,7 +334,7 @@ describe(`While loops`, () => {
     })
   })
 
-  describe(`getMeanAverage(array)`, () => {
+  describe(`getMeanAverage(array: Array<Number>): Number`, () => {
     it(`returns 0 by default`, () => {
       expect(getMeanAverage([])).to.eql(0)
     })
@@ -354,7 +354,7 @@ describe(`While loops`, () => {
     })
   })
 
-  describe(`all(array, valueToCheck)`, () => {
+  describe(`all(array: Array<Any>, valueToCheck: Any): Boolean`, () => {
     it(`returns false by default`, () => {
       expect(all([])).to.eql(true)
     })
@@ -378,7 +378,7 @@ describe(`While loops`, () => {
     })
   })
 
-  describe(`getCountOfSequence(array)`, () => {
+  describe(`getCountOfSequence(array: Array<Number>): Number`, () => {
     it(`returns 0 by default`, () => {
       expect(getCountOfSequence([])).to.eql(0)
     })
